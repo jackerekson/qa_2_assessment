@@ -4,48 +4,32 @@
   <title>Tic-Tac-JS</title>
   <script src="https://code.jquery.com/jquery.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.4/jasmine.css">
-  <style>
-    body {
-        font-family: sans-serif;
-    }
-
-    #game-board {
-        border: solid 1px black;
-        margin-bottom: 2em;
-    }
-
-    #game-board td {
-        border: solid 1px black;
-        height: 80px;
-        width: 80px;
-        text-align: center;
-        font-size: 45px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <h1>Tic Tac JS
   <button id="start-game">Start!</button>
 </h1>
-
-<table id="game-board" cellpadding="0" cellspacing="0">
-  <tr>
-    <td id="cell-0"></td>
-    <td id="cell-1"></td>
-    <td id="cell-2"></td>
-  </tr>
-  <tr>
-    <td id="cell-3"></td>
-    <td id="cell-4"></td>
-    <td id="cell-5"></td>
-  </tr>
-  <tr>
-    <td id="cell-6"></td>
-    <td id="cell-7"></td>
-    <td id="cell-8"></td>
-  </tr>
-</table>
+<section class="container">
+    <table id="game-board" cellpadding="0" cellspacing="0">
+      <tr>
+        <td id="cell-0"></td>
+        <td id="cell-1"></td>
+        <td id="cell-2"></td>
+      </tr>
+      <tr>
+        <td id="cell-3"></td>
+        <td id="cell-4"></td>
+        <td id="cell-5"></td>
+      </tr>
+      <tr>
+        <td id="cell-6"></td>
+        <td id="cell-7"></td>
+        <td id="cell-8"></td>
+      </tr>
+    </table>
+</section>
 
 <script>
   /* Tic-Tac Javascript */
@@ -153,10 +137,10 @@
       // Make next possible move for the computer
 
       for (var i = 0; i < 9; i++) {
-          if (i === 3 || i === 7){
-              board[i] = "o";
-              return board;
-          }
+        //   if (i === 3 || i === 7){
+        //       board[i] = "O";
+        //       return board;
+        //   }
           if (board[i] === null) {
               board[i] = "O";
               return board;
@@ -172,7 +156,7 @@
       var gameOver = false;
 
       if (winner) {
-          $("h1").text(winner + " lost");
+          $("h1").text(winner + " won");
           gameOver = true;
       }
 
