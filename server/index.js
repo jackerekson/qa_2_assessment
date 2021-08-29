@@ -7,7 +7,7 @@ app.get('/',function(req,res) {
   res.sendFile(path.join(__dirname, '../tictacjs.html'));
 });
 
-app.use('/css', express.static(path.join(__dirmane,"../styles.css")));
+app.use('/css', express.static(path.join(__dirname,"../styles.css")));
 
 const port = process.env.PORT || 4000
 
