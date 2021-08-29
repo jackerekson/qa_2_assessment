@@ -1,37 +1,169 @@
 body {
-    font-family: sans-serif;
+    margin: 0;
+    height: 100vh;
+    width: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./tic_tac_toe.jpg);
 }
 
 #game-board {
-    border: solid 1px black;
     margin-bottom: 2em;
+    outline-color: white;
 }
 
 #game-board td {
-    border: solid 4px black;
-    height: 80px;
-    width: 80px;
+    border: solid 3px turquoise;
+    height: 120px;
+    width: 120px;
     text-align: center;
     font-size: 45px;
-    
+    border-radius: 80px;
+    box-shadow: 0 0 20px #719ECE;
+    color: turquoise;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: white;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
 }
 
 h1 {
     display: flex;
     justify-content: center;
+    font-family: Allison;
+    font-size: 50px;
+    color: turquoise;
 }
 
 button {
-    background-color: #232323;
-    width: 75px;
-    height: 25px;
+    background-color: #515f6d;
+    width: 100px;
+    height: 33px;
     color: turquoise;
     border: none;
     margin: 5px;
+    font-family: Allison;
+    font-size: 25px;
+    box-shadow: 0 0 20px #6eacee
+  }
+
+button:hover {
+    background-color: #719ECE;
+    width: 100px;
+    height: 33px;
+    color: turquoise;
+    border: none;
+    margin: 5px;
+    font-family: Allison;
+    font-size: 25px;
+    box-shadow: 0 0 20px #6eacee
+  }
+
+  #cell-0:hover {
+    border: solid 3px rgb(137, 255, 243);
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    font-size: 45px;
+    border-radius: 80px;
+    box-shadow: 0 0 20px #badbff;
+    color: rgb(103, 241, 228);
+  }
+
+  #cell-1:hover {
+    border: solid 3px rgb(137, 255, 243);
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    font-size: 45px;
+    border-radius: 80px;
+    box-shadow: 0 0 20px #badbff;
+    color: rgb(103, 241, 228);
+  }
+
+  #cell-2:hover {
+    border: solid 3px rgb(137, 255, 243);
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    font-size: 45px;
+    border-radius: 80px;
+    box-shadow: 0 0 20px #badbff;
+    color: rgb(103, 241, 228);
+  }
+
+  #cell-3:hover {
+    border: solid 3px rgb(137, 255, 243);
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    font-size: 45px;
+    border-radius: 80px;
+    box-shadow: 0 0 20px #badbff;
+    color: rgb(103, 241, 228);
+  }
+
+  #cell-4:hover {
+    border: solid 3px rgb(137, 255, 243);
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    font-size: 45px;
+    border-radius: 80px;
+    box-shadow: 0 0 20px #badbff;
+    color: rgb(103, 241, 228);
+  }
+
+  #cell-5:hover {
+    border: solid 3px rgb(137, 255, 243);
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    font-size: 45px;
+    border-radius: 80px;
+    box-shadow: 0 0 20px #badbff;
+    color: rgb(103, 241, 228);
+  }
+
+  #cell-6:hover {
+    border: solid 3px rgb(137, 255, 243);
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    font-size: 45px;
+    border-radius: 80px;
+    box-shadow: 0 0 20px #badbff;
+    color: rgb(103, 241, 228);
+  }
+
+  #cell-7:hover {
+    border: solid 3px rgb(137, 255, 243);
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    font-size: 45px;
+    border-radius: 80px;
+    box-shadow: 0 0 20px #badbff;
+    color: rgb(103, 241, 228);
+  }
+
+  #cell-8:hover {
+    border: solid 3px rgb(137, 255, 243);
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    font-size: 45px;
+    border-radius: 80px;
+    box-shadow: 0 0 20px #badbff;
+    color: rgb(103, 241, 228);
   }
