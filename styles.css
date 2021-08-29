@@ -6,7 +6,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    background-image: url(./tic_tac_toe.jpg);
+    background-image: url(/img);
 }
 
 #game-board {
