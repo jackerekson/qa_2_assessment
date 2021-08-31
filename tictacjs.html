@@ -13,6 +13,7 @@
 
 <h1>Tic Tac JS
 </h1>
+<input type="text" class="player" placeholder='Player Name'>
 <div class="btn">
     <button id="start-game">Start!</button>
 </div>
@@ -217,6 +218,13 @@
 
 
   function startGame(evt) {
+    const addH2 = document.querySelector('.btn')
+    const playerName = document.querySelector('.player')
+    addDiv = document.createElement('div')
+    addDiv.classList.add('player-name')
+
+    addH2.innerHTML = `<h2>Good luck ${playerName.value}</h2>`
+
       // Handle start-game button
 
       initializeBoard();
@@ -226,6 +234,7 @@
 
       // Remove start-game button
       $(this).remove();
+      $('.player').remove()
   }
 
 

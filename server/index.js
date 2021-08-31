@@ -9,16 +9,16 @@ let rollbar = new Rollbar({
 })
 
 const app = express()
+app.use(express.json())
 
 app.get('/',function(req,res) {
   res.sendFile(path.join(__dirname, '../tictacjs.html'));
+  rollbar.info('html file served successcully.')
 });
 
-app.post
 
 app.use('/css', express.static(path.join(__dirname,"../styles.css")));
 app.use('/img', express.static(path.join(__dirname,"../tic_tac_toe.jpg")));
-
 
 const port = process.env.PORT || 4000
 
