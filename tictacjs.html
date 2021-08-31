@@ -191,7 +191,11 @@
       if (winner === 'O') {
           $("h1").text(winner + " won, refresh the page to play again");
           GL.remove()
-          addH2.innerHTML = `<h2>Better Luck Next Time</h2>`
+          let ouch = ['Better Lunch Next Time!', 'You could do better...', 'SMH', 'What was that?!?', 'Activate Skynet','You just let a computer beat you!', 'woooooooooow...', '*facepalm']
+          for(let i=0;i<ouch.length;i++){
+              const random = Math.floor(Math.random()*i)
+              addH2.innerHTML = `<h2>${ouch[random]}</h2>`
+          }
           gameOver = true;
       } else if(winner === 'X') {
         $("h1").text(winner + " won, refresh the page to play again");
