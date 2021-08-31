@@ -147,19 +147,19 @@
         //       return board;
         //   }
         let computerChoice = Math.floor(Math.random() * 9)
-        let taken = false
-        //   if (board[computerChoice] === null) {
-        //       board[computerChoice] = "O";
-        //       return board;
-        //   } else if (board[computerChoice] === !null) {
+        // let taken = false
+          if (board[computerChoice] === null) {
+              board[computerChoice] = "O";
+              return board;
+          } else if (board[computerChoice] === !null) {
               
-        //   }
-        while(taken === false){
-            taken = board[computerChoice]
+          }
+        // while(taken === false){
+        //     taken = board[computerChoice]
             
         }
       }
-  }
+  
 
 
   function checkGameOver() {
