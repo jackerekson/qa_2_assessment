@@ -12,8 +12,12 @@ const app = express()
 app.use(express.json())
 
 app.get('/',function(req,res) {
-  res.sendFile(path.join(__dirname, '../tictacjs.html'));
+  try {
+    res.sendFile(path.join(__dirname, '../tictacjs.html'));
   rollbar.info('html file served successcully.')
+  } catch (err) {
+    rollbar.critical(err)
+  }
 });
 
 
