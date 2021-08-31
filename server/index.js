@@ -11,6 +11,8 @@ let rollbar = new Rollbar({
 const app = express()
 app.use(express.json())
 
+const players = []
+
 app.get('/',function(req,res) {
   try {
     res.sendFile(path.join(__dirname, '../tictacjs.html'));
@@ -19,6 +21,26 @@ app.get('/',function(req,res) {
     rollbar.critical(err)
   }
 });
+
+app.post('/api/Tic-Tac-JS', (req, res)=>{
+  let {name} = req.body
+  name = name.trim()
+
+  const index = players.findIndex(playerName=> playerName === name)
+
+  if(index === -1 && name !== ''){
+    players.push(name)
+      rollbar.log('Player added successfully', {author: 'Jack'})
+      res.status(200).send(players)
+  } else if (name === ''){
+      rollbar.error('No name given')
+      res.status(400).send('must provide a name.')
+  } else {
+      rollbar.error('Player already exists')
+      res.status(400).send('that student already exists')
+  }
+
+})
 
 
 app.use('/css', express.static(path.join(__dirname,"../styles.css")));

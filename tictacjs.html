@@ -13,7 +13,9 @@
 
 <h1>Tic Tac JS
 </h1>
-<input type="text" class="player" placeholder='Player Name'>
+<form >
+    <input type="text" class="player" placeholder='Player Name'>
+</form>
 <div class="btn">
     <button id="start-game">Start!</button>
 </div>
@@ -38,6 +40,17 @@
 </section>
 
 <script>
+    const addForm = document.querySelector('form')
+        const nameInput = document.querySelector('input')
+
+        function submitHandler(e){
+            e.preventDefault()
+            axios.post('/api/Tic-Tac-JS', {name: nameInput.value})
+                .then(res => console.log(res))
+                .catch(err => console.log(err))
+        }
+
+        addForm.addEventListener('submit', submitHandler)
   /* Tic-Tac Javascript */
 
 
