@@ -184,10 +184,19 @@
 
       var winner = findWinner();
       var gameOver = false;
+      const GL = document.querySelector('h2')
+      const addH2 = document.querySelector('.btn')
+      
 
-      if (winner) {
+      if (winner === '0') {
           $("h1").text(winner + " won, refresh the page to play again");
+          GL.remove()
+          addH2.innerHTML = `<h2>Better Luck Next Time</h2>`
           gameOver = true;
+      } else if(winner === 'X') {
+          let compliment = ['I knew you had it in you!', 'They never stood a chance', 'WOOOOOOOHOOOOOOO!', 'Your awesoem, no matter whatever everyone else says about you', 'You should quit your day job!', 'You are on fire!', 'Another one bites the dust!']
+          for(let i=0;i<compliment.length;i++)
+          addH2.innerHTML = `<h2>${compliment[i]}</h2>`
       }
 
       else if (isBoardFull()) {
@@ -236,8 +245,7 @@
   function startGame(evt) {
     const addH2 = document.querySelector('.btn')
     const playerName = document.querySelector('.player')
-    addDiv = document.createElement('div')
-    addDiv.classList.add('player-name')
+    
 
     addH2.innerHTML = `<h2>Good luck ${playerName.value}</h2>`
 
