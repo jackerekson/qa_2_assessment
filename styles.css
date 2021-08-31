@@ -45,6 +45,14 @@ h1 {
     color: turquoise;
 }
 
+h2 {
+  display: flex;
+  justify-content: center;
+  font-family: Allison;
+  font-size: 50px;
+  color: turquoise;
+}
+
 button {
     background-color: #515f6d;
     width: 100px;
