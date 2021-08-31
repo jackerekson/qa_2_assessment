@@ -22,7 +22,7 @@ app.get('/',function(req,res) {
   }
 });
 
-app.post('/api/Tic-Tac-JS', (req, res)=>{
+app.post('/TicTacJS', (req, res)=>{
   let {name} = req.body
   name = name.trim()
 

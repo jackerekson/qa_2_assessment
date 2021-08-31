@@ -13,7 +13,7 @@
 
 <h1>Tic Tac JS
 </h1>
-<form >
+<form>
     <input type="text" class="player" placeholder='Player Name'>
 </form>
 <div class="btn">
@@ -45,7 +45,7 @@
 
         function submitHandler(e){
             e.preventDefault()
-            axios.post('/api/Tic-Tac-JS', {name: nameInput.value})
+            axios.post('/TicTacJS', {name: nameInput.value})
                 .then(res => console.log(res))
                 .catch(err => console.log(err))
         }
