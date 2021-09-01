@@ -13,8 +13,8 @@ input {
   background-color: gray;
   font-family: Allison;
   border-radius: 10px;
-  height: 20px;
-  width: 50px;
+  height: 40px;
+  width: 100px;
 }
 
 #game-board {
