@@ -157,20 +157,23 @@
 
   function computerMove() {
       // Make next possible move for the computer
-        const move = () => {
-            for (var i = 0; i < 9; i++) {
-                let computerChoice = Math.floor(Math.random() * 9)
-                if (board[computerChoice] === null) {
-                    board[computerChoice] = "O";
-                }
-            }
-        }
+        
+        //     for (var i = 0; i < 9; i++) {
+        //         let computerChoice = Math.floor(Math.random() * 9)
+        //         if (board[computerChoice] === null) {
+        //             board[computerChoice] = "O";
+        //         }
+        //     }
+        // }
         //   if (i === 3 || i === 7){
         //       board[i] = "O";
         //       return board;
         //   }
         // let taken = false
-        if (move()){
+        for (var i = 0; i < 9; i++) {
+            let computerChoice = Math.floor(Math.random() * 9)
+            if (board[computerChoice] === null) {
+                board[computerChoice] = "O";){
         return board;
         // } else if (move() === !null) {
         //       move()
@@ -180,7 +183,9 @@
         //     taken = board[computerChoice]
             
         }
-  }
+    }
+        }
+}
       
   
 
