@@ -9,6 +9,12 @@ body {
     background-image: url(/img);
 }
 
+input {
+  background-color: gray;
+  font-family: Allison;
+  border-radius: 10px;
+}
+
 #game-board {
     margin-bottom: 2em;
     outline-color: white;
