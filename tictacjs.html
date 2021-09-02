@@ -186,7 +186,7 @@
           let ouch = ['Better Lunch Next Time!', 'You could do better...', 'SMH', 'What was that?!?', 'Activate Skynet','You just let a computer beat you!', 'woooooooooow...', '*facepalm']
           for(let i=0;i<ouch.length;i++){
               const random = Math.floor(Math.random()*i)
-              addH2.innerHTML = `<h2>${ouch[random]}</h2> <br><br> <button class="start-game">Play Again</button>`
+              addH2.innerHTML = `<h2>${ouch[random]}</h2> <br><br> <button id="start-game">Play Again</button>`
           }
           gameOver = true;
       } else if(winner === 'X') {
@@ -195,7 +195,7 @@
           let compliment = ['I knew you had it in you!', 'They never stood a chance', 'WOOOOOOOHOOOOOOO!', 'Your awesoem, no matter what everyone else says about you', 'You should quit your day job!', 'You are on fire!', 'Another one bites the dust!']
           for(let i=0;i<compliment.length;i++){
               const random = Math.floor(Math.random()*i)
-              addH2.innerHTML = `<h2>${compliment[random]}</h2> <br><br> <button class="start-game">Play Again</button>`
+              addH2.innerHTML = `<h2>${compliment[random]}</h2> <br><br> <button id="start-game">Play Again</button>`
           }
           gameOver = true
       }
@@ -244,7 +244,6 @@
 
 
   function startGame(evt) {
-      e.preventDefault
     const addH2 = document.querySelector('.btn')
     const playerName = document.querySelector('.player')
     
